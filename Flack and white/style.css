@@ -1,0 +1,189 @@
+/*
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
+
+/* MAIN STUFF */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1c1f22;
+  color: #f7f7f7;
+  font-family: "Inter", sans-serif;
+}
+
+/* REUSABLE */
+
+.flex-container {
+  display: flex;
+}
+
+.grid-container {
+  display: grid;
+}
+
+/* JUMBOTRON */
+
+.jumbotron {
+  /* background-color: red; */
+  background-color: #1c1f22;
+  display: grid;
+  position: relative;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+
+  height: 100vh;
+
+  font-family: "Raleway", sans-serif;
+  font-size: 62px;
+  font-weight: 100;
+  letter-spacing: -8px;
+  text-transform: uppercase;
+
+  margin-bottom: 64px;
+}
+
+.jumbotron h1 {
+  position: relative;
+  z-index: 2;
+  text-shadow: 0 10px 8px rgba(0, 0, 0, 0.3);
+}
+
+.titles {
+  /* background-color: orange; */
+  grid-column: 1/-1;
+  grid-template-columns: 1fr;
+  align-self: start;
+  justify-self: start;
+}
+
+.name {
+  /* background-color: yellow; */
+  grid-column: 2/3;
+  grid-template-columns: 1fr;
+  justify-self: end;
+  align-self: end;
+}
+
+.my-photo {
+  position: absolute;
+  align-self: center;
+  justify-self: center;
+
+  width: 65%;
+  height: 40%;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.scroll-down {
+  display: flex;
+  grid-column: 1/2;
+  grid-row: 2/3;
+  align-self: end;
+  justify-self: start;
+
+  align-items: center;
+  justify-content: flex-start;
+
+  color: #fe938c;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0px;
+
+  margin: 10px;
+}
+
+.scroll-down h3 {
+  /* background-color: red; */
+  width: 200px;
+}
+
+.icon-scroll {
+  height: 44px;
+  width: 44px;
+  stroke: #fe938c;
+  margin-right: 8px;
+}
+
+/* NAVIGATION */
+
+nav {
+  position: sticky;
+  align-items: center;
+  justify-content: center;
+
+  top: 0px;
+
+  height: 75px;
+}
+
+.nav-links {
+  /* background-color: orange; */
+  align-items: center;
+  justify-content: space-between;
+
+  width: 75%;
+}
+
+.site-logo {
+  height: 50px;
+  width: 50px;
+
+  background-color: #f7f7f7;
+}
+
+.nav-links a:link {
+  /* background-color: purple; */
+  display: block;
+
+  color: #f7f7f7;
+  font-style: italic;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  height: 700px;
+}
+
+.intro {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  margin-top: 100px;
+}
+
+.intro h1 {
+  color: #fe938c;
+  text-transform: uppercase;
+  font-size: 26px;
+  letter-spacing: 2px;
+
+  padding-right: 64px;
+  border-right: 2px solid #f7f7f7;
+}
+
+.intro p {
+  width: 300px;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 16px;
+  margin-left: 64px;
+}
