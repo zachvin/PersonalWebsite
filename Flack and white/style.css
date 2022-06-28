@@ -30,6 +30,20 @@ body {
   display: grid;
 }
 
+.watermark {
+  font-family: "Cormorant Garamand", serif;
+  color: rgba(18, 20, 22, 0.5);
+  font-size: 220px;
+  letter-spacing: -15px;
+  line-height: 0.8;
+  position: absolute;
+  z-index: -3;
+}
+
+span {
+  color: #fe938c;
+}
+
 /* JUMBOTRON */
 
 .jumbotron {
@@ -48,7 +62,7 @@ body {
   letter-spacing: -8px;
   text-transform: uppercase;
 
-  margin-bottom: 64px;
+  /* margin-bottom: 64px; */
 }
 
 .jumbotron h1 {
@@ -82,6 +96,8 @@ body {
   height: 40%;
   object-fit: cover;
   overflow: hidden;
+
+  /* margin-left: 128px; */
 }
 
 .scroll-down {
@@ -122,10 +138,15 @@ nav {
   position: sticky;
   align-items: center;
   justify-content: center;
+  z-index: 5;
 
   top: 0px;
 
   height: 75px;
+
+  background-color: rgba(28, 31, 34, 0.9);
+
+  margin-bottom: 128px;
 }
 
 .nav-links {
@@ -153,37 +174,152 @@ nav {
   text-transform: uppercase;
 }
 
+.nav-links a:visited {
+  color: #f7f7f7;
+}
+
 .nav-links a:hover {
   text-decoration: underline;
 }
 
+/* INTRODUCTION */
+
 .info {
+  /* background-color: red; */
   display: flex;
   justify-content: center;
-  height: 700px;
+  /* height: 700px; */
+  margin-bottom: 420px;
 }
 
-.intro {
+.watermark-about {
+  top: -40px;
+}
+
+.article-intro {
+  /* background-color: orange; */
   display: flex;
   justify-content: center;
-  width: 50%;
-  margin-top: 100px;
+  align-items: flex-start;
+  position: relative;
 }
 
-.intro h1 {
-  color: #fe938c;
-  text-transform: uppercase;
-  font-size: 26px;
-  letter-spacing: 2px;
-
-  padding-right: 64px;
-  border-right: 2px solid #f7f7f7;
-}
-
-.intro p {
-  width: 300px;
+.article-intro p {
   font-size: 18px;
   font-weight: 400;
-  padding: 16px;
-  margin-left: 64px;
+  padding: 8px 16px;
+  margin-left: 100px;
+  line-height: 2;
+  width: 54%;
+  border-left: 2px solid #f7f7f7;
 }
+
+/* PROJECTS */
+
+.article-projects {
+  /* background-color: yellow; */
+  position: relative;
+}
+
+.grid-projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: start;
+}
+
+.watermark-projects {
+  top: -150px;
+  right: 40px;
+}
+
+.project {
+  /* background-color: white; */
+  position: relative;
+
+  height: 250px;
+  width: 500px;
+
+  border-top: 3px solid #f7f7f7;
+  margin-bottom: 100px;
+  padding-top: 10px;
+}
+
+.project h3 {
+  /* color: #fe938c; */
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.project p {
+  font-size: 20px;
+  line-height: 1.7;
+  padding-right: 40px;
+}
+
+.see-more a:link {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+
+  font-style: italic;
+}
+
+.icon-arrow-right {
+  /* position: absolute;
+  bottom: 5px;
+  right: 5px; */
+
+  height: 28px;
+  width: 28px;
+
+  stroke: #fe938c;
+}
+
+.see-more {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+
+  justify-content: flex-end;
+
+  border-bottom: 2px solid #1c1f22;
+  padding: 4px 8px;
+
+  letter-spacing: 1px;
+}
+
+.see-more p {
+  /* background-color: aqua; */
+  padding-right: 5px;
+
+  font-size: 18px;
+}
+
+.see-more a:link {
+  /* background-color: purple; */
+  color: #fe938c;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.see-more a:visited {
+  color: #fe938c;
+}
+
+.see-more:hover {
+  /* background-color: #fe938c; */
+  /* border: 2px solid #fe938c; */
+  border-bottom: 2px solid #fe938c;
+}
+
+/* .see-more:hover p {
+  color: #f7f7f7;
+}
+
+.see-more:hover .icon-arrow-right {
+  stroke: #f7f7f7;
+} */
